@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head><title>Jobs</title></head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
 <h2>Current Job Openings</h2>
-<ul>
-    {% for job in jobs %}
-        <li><strong>{{ job.title }}</strong>: {{ job.description }}
-        <a href="{{ url_for('views.apply', job_id=job.id) }}">Apply</a></li>
-    {% endfor %}
-</ul>
-</body>
-</html>
+{% for job in jobs %}
+<div class="card">
+    <h3>{{ job.title }}</h3>
+    <p>{{ job.description }}</p>
+    <p><strong>Location:</strong> {{ job.location }}</p>
+    <a href="{{ url_for('views.apply', job_id=job.id) }}">
+        <button>Apply Now</button>
+    </a>
+</div>
+{% endfor %}
+{% endblock %}
+

@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head><title>Signup</title></head>
-<body>
-<h2>Signup</h2>
-<form method="POST">
-    Username: <input name="username" type="text" required><br>
-    Password: <input name="password" type="password" required><br>
-    <input type="submit" value="Signup">
-</form>
-<a href="{{ url_for('views.login') }}">Already have an account? Login</a>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<h2>Sign Up</h2>
+<div class="card">
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+
+        <input type="submit" value="Sign Up">
+    </form>
+</div>
+{% endblock %}

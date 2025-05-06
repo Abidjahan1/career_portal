@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head><title>Apply for Job</title></head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
 <h2>Apply for {{ job.title }}</h2>
-<form method="POST">
-    Name: <input name="name" type="text" required><br>
-    Email: <input name="email" type="email" required><br>
-    Resume (URL): <input name="resume" type="text" required><br>
-    <input type="submit" value="Submit Application">
-</form>
-</body>
-</html>
+<div class="card">
+    <form method="POST">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" required>
+
+        <label for="cover_letter">Cover Letter:</label>
+        <textarea name="cover_letter" rows="5" required></textarea>
+
+        <input type="submit" value="Submit Application">
+    </form>
+</div>
+{% endblock %}
