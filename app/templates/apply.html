@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Apply for Job</title></head>
+<body>
+<h2>Apply for {{ job.title }}</h2>
+<form method="POST">
+    Name: <input name="name" type="text" required><br>
+    Email: <input name="email" type="email" required><br>
+    Resume (URL): <input name="resume" type="text" required><br>
+    <input type="submit" value="Submit Application">
+</form>
+</body>
+</html>
