@@ -22,7 +22,7 @@ This is a full-stack job portal built using Flask, MySQL, and OOP principles in 
 ```sql
 CREATE DATABASE jobportal;
 
--- You can populate Job table manually or add via Admin Panel later
+
 ```
 
 ## Folder Structure
